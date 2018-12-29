@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Factory\DotMatrixPrinter.cs" />
+    <Compile Include="Factory\Factory.cs" />
+    <Compile Include="Factory\IPrinter.cs" />
+    <Compile Include="Factory\JetPrinter.cs" />
+    <Compile Include="Factory\LaserPrinter.cs" />
+    <Compile Include="Factory\SystemManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
