@@ -12,7 +12,7 @@ namespace Creational.Factory
         private readonly IPrinterFactory _printerFactory;
         private readonly List<IPrinter> _printers;
 
-        #region Constructor (Injected)
+        #region Constructor
 
         public SystemManagement(IPrinterFactory printerFactory)
         {

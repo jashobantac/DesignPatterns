@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C8AEE8C-DB00-4E0E-B725-5B670963DDB1}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Creational</RootNamespace>
-    <AssemblyName>Creational</AssemblyName>
+    <ProjectGuid>{052266AE-3754-4E73-8AFE-AA78E644A391}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProblemSolving</RootNamespace>
+    <AssemblyName>ProblemSolving</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,36 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\AbstractFactory.cs" />
-    <Compile Include="AbstractFactory\EngineFactory.cs" />
-    <Compile Include="AbstractFactory\Engine\DieselEngine.cs" />
-    <Compile Include="AbstractFactory\Engine\Engine.cs" />
-    <Compile Include="AbstractFactory\Engine\PetrolEngine.cs" />
-    <Compile Include="AbstractFactory\FactoryProducer.cs" />
-    <Compile Include="AbstractFactory\ShapeFactory.cs" />
-    <Compile Include="AbstractFactory\Shape\Circle.cs" />
-    <Compile Include="AbstractFactory\Shape\Rect.cs" />
-    <Compile Include="AbstractFactory\Shape\Shape.cs" />
-    <Compile Include="Builder\DotnetFrameworkBuilder.cs" />
-    <Compile Include="Builder\Framework.cs" />
-    <Compile Include="Builder\IBuilder.cs" />
-    <Compile Include="Builder\IFrameworkDeveloper.cs" />
-    <Compile Include="Builder\Developer.cs" />
-    <Compile Include="Builder\JavaFrameworkBuilder.cs" />
-    <Compile Include="Factory\DotMatrixPrinter.cs" />
-    <Compile Include="Factory\Factory.cs" />
-    <Compile Include="Factory\IPrinter.cs" />
-    <Compile Include="Factory\JetPrinter.cs" />
-    <Compile Include="Factory\LaserPrinter.cs" />
-    <Compile Include="Factory\SystemManagement.cs" />
+    <Compile Include="MarsRover\MarsLand.cs" />
+    <Compile Include="MarsRover\Rover.cs" />
+    <Compile Include="MarsRover\RoverClient.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prototype\ConcretePrototype.cs" />
-    <Compile Include="Prototype\Prototype.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Factory\Description.txt" />
-    <Content Include="ReadMe.txt" />
+    <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
