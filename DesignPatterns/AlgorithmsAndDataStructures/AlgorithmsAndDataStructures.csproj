@@ -44,10 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demo\DetectAndRemoveLinkedListLoopDemo.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="IDemo.cs" />
+    <Compile Include="LinkedLists\CheckOneByOneStrategy.cs" />
+    <Compile Include="LinkedLists\KCounterStrategy.cs" />
     <Compile Include="LinkedLists\LLExtensions.cs" />
     <Compile Include="LinkedLists\LLGenerator.cs" />
     <Compile Include="LinkedLists\LLNode.cs" />
+    <Compile Include="LinkedLists\Strategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -60,5 +60,9 @@ namespace AlgorithmsAndDataStructures.LinkedLists
         {
             return null;
         }
+        public static bool DetectAndRemoveNode(this LLNode node, Strategy loopRemovalStrategy)
+        {
+            return loopRemovalStrategy.DetectAndRemoveLoop(node);
+        }
     }
 }

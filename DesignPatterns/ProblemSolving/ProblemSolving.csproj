@@ -43,6 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demo\IDemo.cs" />
+    <Compile Include="Demo\IPodInventoryDemo.cs" />
+    <Compile Include="IPODInventory\ArgentinaIpodFactory.cs" />
+    <Compile Include="IPODInventory\ArgentinaStore.cs" />
+    <Compile Include="IPODInventory\BrazilIpodFactory.cs" />
+    <Compile Include="IPODInventory\BrazilStore.cs" />
+    <Compile Include="IPODInventory\Constants.cs" />
+    <Compile Include="IPODInventory\ImportedIpodDecorator.cs" />
+    <Compile Include="IPODInventory\Inventory.cs" />
+    <Compile Include="IPODInventory\IPod.cs" />
+    <Compile Include="IPODInventory\Product.cs" />
+    <Compile Include="IPODInventory\ProductFactory.cs" />
+    <Compile Include="IPODInventory\Store.cs" />
+    <Compile Include="IPODInventory\StoreFactory.cs" />
+    <Compile Include="Demo\MarsRoverDemo.cs" />
     <Compile Include="MarsRover\MarsLand.cs" />
     <Compile Include="MarsRover\Rover.cs" />
     <Compile Include="MarsRover\RoverClient.cs" />
