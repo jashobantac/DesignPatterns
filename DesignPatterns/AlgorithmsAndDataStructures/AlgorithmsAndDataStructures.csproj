@@ -53,6 +53,7 @@
     <Compile Include="LinkedLists\LLGenerator.cs" />
     <Compile Include="LinkedLists\LLNode.cs" />
     <Compile Include="LinkedLists\Strategy.cs" />
+    <Compile Include="Misc\IntProgramming.cs" />
     <Compile Include="Misc\MaxIndexStrategy.cs" />
     <Compile Include="Misc\StringProgramming.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

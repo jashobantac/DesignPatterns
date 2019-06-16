@@ -1,5 +1,7 @@
 ﻿using System;
+
 using AlgorithmsAndDataStructures.Demo;
+using AlgorithmsAndDataStructures.Misc;
 
 namespace AlgorithmsAndDataStructures
 {
@@ -18,6 +20,9 @@ namespace AlgorithmsAndDataStructures
 
             _demo = new DetectAndRemoveLinkedListLoopDemo();
 
+            string fibonacci = IntProgramming.GetFibonacciSeries(20);
+
+            bool isPrime = IntProgramming.IsPrime(13);
             _demo.Run();
             Console.ReadLine();
         }

@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="Demo\IDemo.cs" />
     <Compile Include="Demo\IPodInventoryDemo.cs" />
+    <Compile Include="HotelManagement\BookingService.cs" />
+    <Compile Include="HotelManagement\BranchFactory.cs" />
+    <Compile Include="HotelManagement\Customer.cs" />
+    <Compile Include="HotelManagement\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="HotelManagement\Hotel.cs" />
+    <Compile Include="HotelManagement\PricingStrategy.cs" />
     <Compile Include="IPODInventory\ArgentinaIpodFactory.cs" />
     <Compile Include="IPODInventory\ArgentinaStore.cs" />
     <Compile Include="IPODInventory\BrazilIpodFactory.cs" />
@@ -61,11 +67,27 @@
     <Compile Include="MarsRover\MarsLand.cs" />
     <Compile Include="MarsRover\Rover.cs" />
     <Compile Include="MarsRover\RoverClient.cs" />
+    <Compile Include="Monopoly\Game\Board.cs" />
+    <Compile Include="Monopoly\Game\Cells\Cell.cs" />
+    <Compile Include="Monopoly\Game\Cells\CellFactory.cs" />
+    <Compile Include="Monopoly\Game\Cells\EmptyCell.cs" />
+    <Compile Include="Monopoly\Game\Cells\Hotel.cs" />
+    <Compile Include="Monopoly\Game\Cells\Jail.cs" />
+    <Compile Include="Monopoly\Game\Cells\Treasure.cs" />
+    <Compile Include="Monopoly\Game\Dice.cs" />
+    <Compile Include="Monopoly\Game\MonopolyGame.cs" />
+    <Compile Include="Monopoly\Game\Players\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RailwayProblem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
