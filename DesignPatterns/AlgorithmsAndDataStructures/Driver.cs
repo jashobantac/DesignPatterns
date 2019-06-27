@@ -23,6 +23,9 @@ namespace AlgorithmsAndDataStructures
             string fibonacci = IntProgramming.GetFibonacciSeries(20);
 
             bool isPrime = IntProgramming.IsPrime(13);
+
+            _demo = new InsertionSortDemo();
+
             _demo.Run();
             Console.ReadLine();
         }

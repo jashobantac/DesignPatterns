@@ -8,7 +8,7 @@ namespace ProblemSolving
         private static void Main(string[] args)
         {
             _demo = new MarsRoverDemo();
-            _demo = new IPodInventoryDemo();
+            //_demo = new IPodInventoryDemo();
 
             _demo.Run();
             Console.ReadLine();

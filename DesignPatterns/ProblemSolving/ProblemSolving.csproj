@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Demo\IDemo.cs" />
     <Compile Include="Demo\IPodInventoryDemo.cs" />
+    <Compile Include="HackerRank\WarmUp\CountingValleys.cs" />
+    <Compile Include="HackerRank\WarmUp\GradingStudents.cs" />
+    <Compile Include="HackerRank\WarmUp\JumpingOnTheClouds.cs" />
+    <Compile Include="HackerRank\WarmUp\QueensAttack.cs" />
+    <Compile Include="HackerRank\WarmUp\SockMerchant.cs" />
     <Compile Include="HotelManagement\BookingService.cs" />
     <Compile Include="HotelManagement\BranchFactory.cs" />
     <Compile Include="HotelManagement\Customer.cs" />
@@ -84,6 +89,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="HackerRank\Beginner\" />
     <Folder Include="RailwayProblem\" />
   </ItemGroup>
   <ItemGroup>
