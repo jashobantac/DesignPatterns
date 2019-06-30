@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Demo\IDemo.cs" />
     <Compile Include="Demo\IPodInventoryDemo.cs" />
+    <Compile Include="HackerRank\Backtracking\NQueenProblem.cs" />
+    <Compile Include="HackerRank\Backtracking\RemoveInvalidParenthesesProblem.cs" />
     <Compile Include="HackerRank\WarmUp\CountingValleys.cs" />
     <Compile Include="HackerRank\WarmUp\GradingStudents.cs" />
     <Compile Include="HackerRank\WarmUp\JumpingOnTheClouds.cs" />
