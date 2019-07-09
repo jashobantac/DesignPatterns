@@ -1,7 +1,7 @@
 ﻿using System;
 
 using AlgorithmsAndDataStructures.Demo;
-using AlgorithmsAndDataStructures.Misc;
+using AlgorithmsAndDataStructures.Matrix;
 
 namespace AlgorithmsAndDataStructures
 {
@@ -20,12 +20,13 @@ namespace AlgorithmsAndDataStructures
 
             _demo = new DetectAndRemoveLinkedListLoopDemo();
 
-            string fibonacci = IntProgramming.GetFibonacciSeries(20);
+            //string fibonacci = IntProgramming.GetFibonacciSeries(5);
 
-            bool isPrime = IntProgramming.IsPrime(13);
+            //bool isPrime = IntProgramming.IsPrime(13);
 
-            _demo = new InsertionSortDemo();
+            //_demo = new InsertionSortDemo();
 
+            _demo = new MatrixDemo();
             _demo.Run();
             Console.ReadLine();
         }

@@ -49,6 +49,7 @@
     <Compile Include="HackerRank\Backtracking\RemoveInvalidParenthesesProblem.cs" />
     <Compile Include="HackerRank\WarmUp\CountingValleys.cs" />
     <Compile Include="HackerRank\WarmUp\GradingStudents.cs" />
+    <Compile Include="HackerRank\WarmUp\InfixToPostfix.cs" />
     <Compile Include="HackerRank\WarmUp\JumpingOnTheClouds.cs" />
     <Compile Include="HackerRank\WarmUp\QueensAttack.cs" />
     <Compile Include="HackerRank\WarmUp\SockMerchant.cs" />

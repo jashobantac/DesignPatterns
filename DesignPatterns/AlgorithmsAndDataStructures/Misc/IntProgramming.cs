@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace AlgorithmsAndDataStructures.Misc
 {
@@ -49,6 +48,25 @@ namespace AlgorithmsAndDataStructures.Misc
                 sb.Append(current + " ");
             }
             return sb.ToString();
+            //string str = string.Empty;
+            //GetFibonacciSeriesRecursive(n, str);
+            //return str;
+        }
+
+        public static int GetFibonacciSeriesRecursive(int n, string str)
+        {
+            if (n <= 1)
+            {
+                str += " " + 1;
+                return 1;
+            }
+            else
+            {
+
+                int sum = GetFibonacciSeriesRecursive(n - 1, str) + GetFibonacciSeriesRecursive(n - 2, str);
+                str += " " + sum;
+                return sum;
+            }
         }
     }
 }

@@ -147,4 +147,20 @@ namespace AlgorithmsUnitTest
             Assert.IsTrue(possibleStrings.Count == 2);
         }
     }
+
+    [TestClass]
+    public class InfixToPostFixTest
+    {
+        [TestMethod]
+        public void TestInfixToPostFix()
+        {
+            string infix = "((A+B)-C*(D/E))+F";
+            string postFix = InfixToPostfix.GetPostfix(infix);
+            Assert.IsTrue(postFix == "AB+CDE/*-F+");
+
+            infix = "a+b*(c^d-e)^(f+g*h)-i";
+            postFix = InfixToPostfix.GetPostfix(infix);
+            Assert.IsTrue(postFix == "abcd^e-fgh*+^*+i-");
+        }
+    }
 }

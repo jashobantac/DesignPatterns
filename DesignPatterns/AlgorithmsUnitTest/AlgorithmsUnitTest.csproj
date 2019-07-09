@@ -55,6 +55,7 @@
     <Compile Include="MonopolyGameTest.cs" />
     <Compile Include="SortingTests.cs" />
     <Compile Include="UnitTest3.cs" />
+    <Compile Include="UnitTest4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
