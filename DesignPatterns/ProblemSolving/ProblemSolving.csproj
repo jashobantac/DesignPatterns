@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Demo\IDemo.cs" />
     <Compile Include="Demo\IPodInventoryDemo.cs" />
+    <Compile Include="Demo\SnakeDemo.cs" />
     <Compile Include="HackerRank\Backtracking\NQueenProblem.cs" />
     <Compile Include="HackerRank\Backtracking\RemoveInvalidParenthesesProblem.cs" />
     <Compile Include="HackerRank\WarmUp\CountingValleys.cs" />
@@ -87,6 +88,14 @@
     <Compile Include="Monopoly\Game\Players\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snake\Apple.cs" />
+    <Compile Include="Snake\Base\ModelBase.cs" />
+    <Compile Include="Snake\Field.cs" />
+    <Compile Include="Snake\Fruit.cs" />
+    <Compile Include="Snake\FruitFactory.cs" />
+    <Compile Include="Snake\Game.cs" />
+    <Compile Include="Snake\Point.cs" />
+    <Compile Include="Snake\Snake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -97,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures.csproj">
+      <Project>{b5d2a522-86a1-4c75-817a-d4bbef4c055b}</Project>
+      <Name>AlgorithmsAndDataStructures</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

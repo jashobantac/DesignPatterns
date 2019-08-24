@@ -1,0 +1,70 @@
+﻿<Window
+    x:Class="WPFApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:WPFApp.Controls"
+    mc:Ignorable="d"
+    WindowState="Maximized"
+    Title="MainWindow"
+    Padding="10"
+    Height="auto"
+    Width="auto">
+    <Window.InputBindings>
+        <KeyBinding
+            Key="Up"
+            Command="{Binding MoveCommand}"
+            CommandParameter="U" />
+        <KeyBinding
+            Key="Right"
+            Command="{Binding MoveCommand}"
+            CommandParameter="R" />
+        <KeyBinding
+            Key="Left"
+            Command="{Binding MoveCommand}"
+            CommandParameter="L" />
+        <KeyBinding
+            Key="Down"
+            Command="{Binding MoveCommand}"
+            CommandParameter="D" />
+    </Window.InputBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <controls:FieldControl Breadth="{Binding Field.Width}" Length="{Binding Field.Height}" />
+        <StackPanel
+            Grid.Column="1"
+            Orientation="Vertical"
+            VerticalAlignment="Center"
+            Margin="5"
+            Grid.Row="0">
+            <TextBlock
+                Text="SCORE :"
+                FontFamily="Comic Sans"
+                FontSize="30"
+                VerticalAlignment="Center"
+                FontWeight="Bold" />
+            <TextBlock
+                Text="{Binding Score}"
+                FontFamily="Comic Sans"
+                FontSize="30"
+                VerticalAlignment="Center"
+                FontWeight="Bold" />
+            <Button
+                Command="{Binding RestartGameCommand}"
+                Padding="10"
+                Width="120"
+                Height="35"
+                Margin="5"
+                Content="Restart" />
+
+        </StackPanel>
+    </Grid>
+</Window>

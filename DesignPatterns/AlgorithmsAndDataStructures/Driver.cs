@@ -26,7 +26,8 @@ namespace AlgorithmsAndDataStructures
 
             //_demo = new InsertionSortDemo();
 
-            _demo = new MatrixDemo();
+            //_demo = new MatrixDemo();
+
             _demo.Run();
             Console.ReadLine();
         }

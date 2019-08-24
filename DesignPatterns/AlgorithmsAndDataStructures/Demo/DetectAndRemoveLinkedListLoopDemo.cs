@@ -19,15 +19,17 @@ namespace AlgorithmsAndDataStructures.Demo
             rootTwo.Next = rootThree;
             rootThree.Next = rootFour;
             rootFour.Next = rootFive;
-            rootFive.Next = rootThree;
+            rootFive.Next = rootSix;
             rootSix.Next = rootSeven;
             rootSeven.Next = rootEight;
             //rootEight.Next = rootTwo;
 
-            Strategy strategy = null;
-            strategy = new CheckOneByOneStrategy();
-            //strategy = new KCounterStrategy();
-            head.DetectAndRemoveNode(strategy);
+            //Strategy strategy = null;
+            //strategy = new CheckOneByOneStrategy();
+            ////strategy = new KCounterStrategy();
+            //head.DetectAndRemoveNode(strategy);
+
+            LLNode node = head.FindMiddle();
         }
     }
 }

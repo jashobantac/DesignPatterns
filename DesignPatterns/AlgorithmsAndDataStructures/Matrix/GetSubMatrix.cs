@@ -104,5 +104,26 @@
             RotateMatrix(matrix, ++rowStartIndex, --rowEndIndex, ++colStartIndex, --colEndIndex);
             //PrintMatrix(matrix);
         }
+
+        public static void RotateMatrix90DegAntiClockWise(int[,] matrix)
+        {
+            System.Console.WriteLine("===================");
+            int n = matrix.GetLength(0) - 1;
+            for (int j = 0; j <= n / 2; j++)
+            {
+                for (int i = j; i < n - j; i++)
+                {
+                    int temp = matrix[j, i];
+
+                    matrix[j, i] = matrix[i, n - j];
+                    matrix[i, n - j] = matrix[n - j, n - j - i];
+                    matrix[n - j, n - j - i] = matrix[n - j - i, j];
+                    matrix[n - j - i, j] = temp;
+                }
+
+                System.Console.WriteLine("\nPrinting");
+                PrintMatrix(matrix);
+            }
+        }
     }
 }

@@ -56,10 +56,34 @@ namespace AlgorithmsAndDataStructures.LinkedLists
             return prev;
         }
 
+        public static LLNode FindMiddle(this LLNode node)
+        {
+            // If node has only one node, the starting is the middle element.
+            if (node.Next == null)
+            {
+                return node;
+            }
+
+            LLNode slowNode = node;
+            LLNode fastNode = node;
+            // fast node moves twice the speed of slow node.
+            while (fastNode != null)
+            {
+                slowNode = slowNode.Next;
+                if (fastNode.Next == null)
+                {
+                    break;
+                }
+                fastNode = fastNode.Next.Next;
+            }
+            return slowNode;
+        }
+
         public static LLNode ReverseRecursive(this LLNode node)
         {
             return null;
         }
+
         public static bool DetectAndRemoveNode(this LLNode node, Strategy loopRemovalStrategy)
         {
             return loopRemovalStrategy.DetectAndRemoveLoop(node);
