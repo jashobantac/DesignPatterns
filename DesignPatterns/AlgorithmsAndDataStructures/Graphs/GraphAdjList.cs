@@ -1,39 +1,42 @@
 ﻿using System.Collections.Generic;
 
-namespace AlgorithmsAndDataStructures.SearchAndSort
+namespace AlgorithmsAndDataStructures.Graphs
 {
-    public class Graph
+    /// <summary>
+    /// Adjacency List representation of Graph.
+    /// </summary>
+    public class GraphAdjList
     {
         /// <summary>
         /// The number of vertices.
         /// </summary>
         public int V { get; set; }
 
-        public List<int>[] Adj { get; private set; }
+        public List<int>[] AdjacencyList { get; private set; }
 
-        public Graph(int v)
+        public GraphAdjList(int v)
         {
             V = v;
-            Adj = new List<int>[v];
+            AdjacencyList = new List<int>[v];
 
             for (int i = 0; i < V; i++)
             {
-                Adj[i] = new List<int>();
+                AdjacencyList[i] = new List<int>();
             }
         }
 
         public void AddEdge(int src, int dest)
         {
-            Adj[src].Add(dest);
+            AdjacencyList[src].Add(dest);
         }
 
         private void DepthFirstVisit(int v, bool[] visited, ref string str)
         {
             visited[v] = true;
             str += v + " ";
-            for (int i = 0; i < Adj[v].Count; i++)
+            for (int i = 0; i < AdjacencyList[v].Count; i++)
             {
-                int current = Adj[v][i];
+                int current = AdjacencyList[v][i];
                 if (!visited[current])
                 {
                     DepthFirstVisit(current, visited, ref str);
@@ -44,7 +47,7 @@ namespace AlgorithmsAndDataStructures.SearchAndSort
         public string DepthFirstTraversal(int v)
         {
             string str = string.Empty;
-            bool[] visited = new bool[Adj.Length];
+            bool[] visited = new bool[AdjacencyList.Length];
 
             DepthFirstVisit(v, visited, ref str);
             return str;
@@ -62,13 +65,13 @@ namespace AlgorithmsAndDataStructures.SearchAndSort
                 int current = queue.Dequeue();
                 str += current + " ";
 
-                for (int i = 0; i < Adj[current].Count; i++)
+                for (int i = 0; i < AdjacencyList[current].Count; i++)
                 {
-                    int item = Adj[current][i];
+                    int item = AdjacencyList[current][i];
                     if (!visited[item])
                     {
                         visited[item] = true;
-                        queue.Enqueue(Adj[current][i]);
+                        queue.Enqueue(AdjacencyList[current][i]);
                     }
                 }
             }
@@ -77,11 +80,10 @@ namespace AlgorithmsAndDataStructures.SearchAndSort
         public string BreadthFirstTraversal(int v)
         {
             string str = string.Empty;
-            bool[] visited = new bool[Adj.Length];
+            bool[] visited = new bool[AdjacencyList.Length];
 
             BreadthFirstTraversal(v, visited, ref str);
             return str;
-
         }
     }
 }

@@ -47,6 +47,10 @@
     <Compile Include="Demo\DetectAndRemoveLinkedListLoopDemo.cs" />
     <Compile Include="Demo\SearchingAndSortingDemo.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="Graphs\GraphAdjMatrix.cs" />
+    <Compile Include="Graphs\GraphEdge.cs" />
+    <Compile Include="Graphs\GraphOperations.cs" />
+    <Compile Include="Graphs\Node.cs" />
     <Compile Include="IDemo.cs" />
     <Compile Include="LinkedLists\CheckOneByOneStrategy.cs" />
     <Compile Include="LinkedLists\KCounterStrategy.cs" />
@@ -63,7 +67,7 @@
     <Compile Include="Misc\StringProgramming.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchAndSort\BubbleSort.cs" />
-    <Compile Include="SearchAndSort\Graph.cs" />
+    <Compile Include="Graphs\GraphAdjList.cs" />
     <Compile Include="SearchAndSort\InsertionSort.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace Multithreading
 {
@@ -6,6 +8,28 @@ namespace Multithreading
     {
         private static void Main(string[] args)
         {
+            //TestThreadState();
+
+            //LockingPractice.LockingExample();
+            //MonitorPractice.LockingExample();
+
+            //LockingPractice.LockingBestPractice();
+
+            //LockingPractice.Deadlock();
+
+            /// Below LOC will through a SynchronizationLockException.
+            //MonitorPractice.WrongMonitorExample();
+
+            SynchronizationContextsPractice.RunThreadSafeMethod();
+            Thread.Sleep(4000);
+            SynchronizationContextsPractice.RunThreadUnsafeMethod();
+
+            Console.Read();
+        }
+
+        private static void TestThreadState()
+        {
+            ThreadStatePractice.PrintThreadStates();
         }
 
         private static void RemoveFromList()
