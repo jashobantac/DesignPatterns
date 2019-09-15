@@ -4,57 +4,90 @@ namespace Multithreading.Extensions
 {
     public static class ColorConsole
     {
-        public static void WriteInfo(object obj)
+        private static readonly object _locker = new object();
+
+        public static void WriteInfo(object obj, string prefix = "INFO")
         {
-            if (obj == null)
+            lock (_locker)
             {
-                return;
+                if (obj == null)
+                {
+                    return;
+                }
+                if (prefix == null)
+                {
+                    prefix = "INFO";
+                }
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+                if (!prefix.Trim().EndsWith(":"))
+                {
+                    Console.Write(prefix + " : ");
+                }
+                Console.ResetColor();
+                Console.WriteLine(obj.ToString());
             }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("INFO : ");
-            Console.ResetColor();
-            Console.WriteLine(obj.ToString());
         }
 
-        public static void WriteWarning(object obj)
+        public static void WriteWarning(object obj, string prefix = "WARN")
         {
-            if (obj == null)
+            lock (_locker)
             {
-                return;
+                if (obj == null)
+                {
+                    return;
+                }
+                if (prefix == null)
+                {
+                    prefix = "WARN";
+                }
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Black;
+                if (!prefix.Trim().EndsWith(":"))
+                {
+                    Console.Write(prefix + " : ");
+                }
+                Console.ResetColor();
+                Console.WriteLine(obj.ToString());
             }
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("WARN : ");
-            Console.ResetColor();
-            Console.WriteLine(obj.ToString());
         }
 
         public static void WriteError(object obj)
         {
-            if (obj == null)
+            lock (_locker)
             {
-                return;
+                if (obj == null)
+                {
+                    return;
+                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("ERROR : ");
+                Console.ResetColor();
+                Console.WriteLine(obj.ToString());
             }
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("ERROR : ");
-            Console.ResetColor();
-            Console.WriteLine(obj.ToString());
         }
 
         public static void WriteException(object obj, string prefix = "EXCEPTION")
         {
-            if (obj == null)
+            lock (_locker)
             {
-                return;
+                if (obj == null)
+                {
+                    return;
+                }
+                if (prefix == null)
+                {
+                    prefix = "EXCEPTION";
+                }
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.White;
+                if (!prefix.Trim().EndsWith(":"))
+                {
+                    Console.Write(prefix + " : ");
+                }
+                Console.ResetColor();
+                Console.WriteLine(obj.ToString());
             }
-            if (string.IsNullOrEmpty(prefix))
-            {
-                prefix = "EXCEPTION";
-            }
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(prefix + " : ");
-            Console.ResetColor();
-            Console.WriteLine(obj.ToString());
         }
     }
 }

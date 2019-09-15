@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using Multithreading.EventWaitHandles;
 
 namespace Multithreading
 {
@@ -20,9 +21,14 @@ namespace Multithreading
             /// Below LOC will through a SynchronizationLockException.
             //MonitorPractice.WrongMonitorExample();
 
-            SynchronizationContextsPractice.RunThreadSafeMethod();
-            Thread.Sleep(4000);
-            SynchronizationContextsPractice.RunThreadUnsafeMethod();
+            //SynchronizationContextsPractice.RunThreadSafeMethod();
+            //Thread.Sleep(4000);
+            //SynchronizationContextsPractice.RunThreadUnsafeMethod();
+
+            //SemaphorePractice.TestSemaphore();
+            //SemaphorePractice.TestSemaphoreSlim();
+
+            SignallingConstructs.PrintUsingAutoResetEvent();
 
             Console.Read();
         }

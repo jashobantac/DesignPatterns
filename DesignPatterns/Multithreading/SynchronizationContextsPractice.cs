@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.Remoting.Contexts;
 using System.Threading;
+
 using Multithreading.Extensions;
 
 namespace Multithreading
@@ -30,7 +31,7 @@ namespace Multithreading
     {
         public void ThreadSafeMethod()
         {
-            Console.WriteLine("Synchronization Context : " + SynchronizationContext.Current.());
+            //Console.WriteLine("Synchronization Context : " + SynchronizationContext.Current.GetHashCode());
             Console.WriteLine("Started. Thread ID : " + Thread.CurrentThread.ManagedThreadId);
             Thread.Sleep(1000);
             Console.WriteLine("Terminated : Thread ID : " + Thread.CurrentThread.ManagedThreadId);
@@ -72,7 +73,7 @@ namespace Multithreading
         public static void RunThreadUnsafeMethod()
         {
             Console.WriteLine();
-            ColorConsole.WriteException("Running Thread UnSafe Method.");
+            ColorConsole.WriteException("Running Thread UnSafe Method.","UNSAFE METHOD");
             Thread th1 = new Thread(NoAutoLock.ThreadUnSafeMethod);
             Thread th2 = new Thread(NoAutoLock.ThreadUnSafeMethod);
             Thread th3 = new Thread(NoAutoLock.ThreadUnSafeMethod);
