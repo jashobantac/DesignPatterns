@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Multithreading.EventWaitHandles;
 
 namespace Multithreading
@@ -28,8 +27,18 @@ namespace Multithreading
             //SemaphorePractice.TestSemaphore();
             //SemaphorePractice.TestSemaphoreSlim();
 
-            SignallingConstructs.PrintUsingAutoResetEvent();
+            //SignallingConstructs.PrintUsingAutoResetEvent();
+            //SignallingConstructs.CallSetBeforeWaitOne();
+            //SignallingConstructs.TwoWaySignal();
+            SignallingConstructs.CountDownEventDemo();
 
+            WaitForTermination();
+        }
+
+        private static void WaitForTermination()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\n\nProgram Execution Completed. Please press any key to terminate.");
             Console.Read();
         }
 

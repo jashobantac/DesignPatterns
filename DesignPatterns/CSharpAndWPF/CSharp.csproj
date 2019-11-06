@@ -70,6 +70,8 @@
     <Compile Include="Common\EventManagerBase.cs" />
     <Compile Include="Common\Extensions\DelegateExtensions.cs" />
     <Compile Include="JetFighter.cs" />
+    <Compile Include="MemoryManagement\DisposablePattern.cs" />
+    <Compile Include="MemoryManagement\JcbSafeHandle.cs" />
     <Compile Include="MulticastDelegateProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

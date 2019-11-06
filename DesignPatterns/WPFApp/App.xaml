@@ -1,9 +1,37 @@
-﻿<Application x:Class="WPFApp.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WPFApp"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="WPFApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFApp"
+    StartupUri="LocationWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate x:Key="LocationIcon">
+            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                <Grid>
+                    <Grid
+                        Name="backgroundGrid"
+                        Width="256"
+                        Height="256"
+                        Visibility="Collapsed" />
+                    <Path
+                        Data="M10.1,5C7.200008,5 4.8999911,7.1999969 4.8999911,10 4.8999911,12.800003 7.200008,15 10.1,15 12.999992,15 15.300009,12.800003 15.300009,10 15.300009,7.3000031 12.899986,5 10.1,5z M10.1,0C15.700003,0 20.2,4.3000031 20.2,9.6999969 20.2,11.600006 19.599994,13.300003 18.700002,14.800003L14.499991,23.300003 10.1,32 5.800015,23.300003 1.6000052,14.800003C0.60000567,13.300003 -4.7890353E-08,11.600006 0,9.6999969 -4.7890353E-08,4.3000031 4.4999972,0 10.1,0z"
+                        Stretch="Uniform"
+                        Fill="DeepPink"
+                        Width="256"
+                        Height="256"
+                        Margin="0,0,0,0"
+                        RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <RotateTransform Angle="0" />
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                </Grid>
+            </Viewbox>
+        </DataTemplate>
     </Application.Resources>
 </Application>
